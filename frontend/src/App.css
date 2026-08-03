@@ -1,0 +1,78 @@
+.glow-cyan {
+    box-shadow: 0 0 12px hsl(190 90% 50% / 0.45);
+}
+
+.glow-gold {
+    box-shadow: 0 0 12px hsl(43 74% 66% / 0.45);
+}
+
+.text-glow {
+    text-shadow: 0 0 10px hsl(190 90% 50% / 0.6);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.45s ease-out both;
+}
+
+@keyframes pulseDot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+.pulse-dot {
+    animation: pulseDot 1.6s ease-in-out infinite;
+}
+
+@keyframes micPulse {
+    0% {
+        box-shadow: 0 0 0 0 hsl(190 90% 50% / 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 14px hsl(190 90% 50% / 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 hsl(190 90% 50% / 0);
+    }
+}
+
+.mic-active {
+    animation: micPulse 1.2s infinite;
+}
+
+.agent-card {
+    transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.agent-card:hover {
+    transform: translateY(-4px);
+    border-color: hsl(190 90% 50% / 0.6);
+    box-shadow: 0 4px 24px hsl(190 90% 50% / 0.12);
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: hsl(190 90% 50%);
+    display: inline-block;
+    animation: pulseDot 1s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }

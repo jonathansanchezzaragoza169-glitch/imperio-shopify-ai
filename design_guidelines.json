@@ -1,0 +1,101 @@
+{
+  "theme": "Dark Mode Only - High-End Financial Command Center (Luxury/Swiss)",
+  "colors": {
+    "background": "hsl(240, 10%, 4%)",
+    "foreground": "hsl(0, 0%, 98%)",
+    "card": "hsl(240, 10%, 6%)",
+    "card-foreground": "hsl(0, 0%, 98%)",
+    "popover": "hsl(240, 10%, 6%)",
+    "popover-foreground": "hsl(0, 0%, 98%)",
+    "primary": "hsl(190, 90%, 50%)",
+    "primary-foreground": "hsl(240, 10%, 4%)",
+    "secondary": "hsl(240, 10%, 12%)",
+    "secondary-foreground": "hsl(0, 0%, 98%)",
+    "muted": "hsl(240, 10%, 12%)",
+    "muted-foreground": "hsl(240, 5%, 65%)",
+    "accent": "hsl(43, 74%, 66%)",
+    "accent-foreground": "hsl(240, 10%, 4%)",
+    "destructive": "hsl(0, 84%, 60%)",
+    "destructive-foreground": "hsl(0, 0%, 98%)",
+    "border": "hsl(240, 10%, 16%)",
+    "input": "hsl(240, 10%, 16%)",
+    "ring": "hsl(190, 90%, 50%)",
+    "chart-1": "hsl(190, 90%, 50%)",
+    "chart-2": "hsl(43, 74%, 66%)",
+    "chart-3": "hsl(260, 70%, 65%)",
+    "chart-4": "hsl(340, 75%, 55%)",
+    "chart-5": "hsl(160, 60%, 45%)"
+  },
+  "typography": {
+    "headings": "font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.025em;",
+    "body": "font-family: 'IBM Plex Sans', sans-serif; letter-spacing: 0.01em;",
+    "monospace": "font-family: 'JetBrains Mono', monospace;",
+    "rules": "Import fonts via: @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap'); Never use Inter. Use uppercase with wide tracking for small labels."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use heavily on the right-side chat panel ('Cerebro') and sticky headers. Tailwind: bg-black/60 backdrop-blur-2xl border-l border-white/10.",
+    "grid_borders": "Agent grid should look like a technical skeleton. Use subtle border-border classes to define areas without relying on heavy cards.",
+    "glow_effects": "Active agent dots and the Cerebro voice button should have an electric cyan or pink glow (drop-shadow-[0_0_8px_rgba(0,255,255,0.5)])."
+  },
+  "grids_and_layouts": {
+    "strategy": "Command Center / High Density Grid. It should feel like a Bloomberg terminal meets a futuristic spaceship dashboard.",
+    "container": "h-screen w-screen overflow-hidden flex bg-background text-foreground",
+    "sidebar": "w-64 border-r border-border p-4 flex flex-col hidden lg:flex",
+    "main_content": "flex-1 flex flex-col h-full overflow-y-auto px-4 md:px-8 py-6",
+    "right_panel": "w-full lg:w-96 border-l border-border bg-black/40 backdrop-blur-xl h-full flex flex-col"
+  },
+  "component_instructions": {
+    "cards": "Agent cards must be sleek. Subtle 1px border. Hover effect: slight lift (-translate-y-1) and the border illuminates slightly with the primary color.",
+    "buttons": "Pill-shaped or sharp (rounded-none). Never soft-rounded. Primary buttons should have a subtle inner glow.",
+    "inputs": "Shadcn components heavily modified for dark mode. No white backgrounds. Focus ring is cyan.",
+    "chat_interface": "Cerebro chat should feel conversational but technical. System messages in monospace.",
+    "activity_feed": "A ticker or scrolling list showing real-time agent tasks (e.g., 'Agente 4: Clonando tienda X...', 'Agente 5: Beneficio +$400')."
+  },
+  "motion": {
+    "hover_states": "transition-transform duration-200 ease-out",
+    "entrance": "Staggered fade-in for agent cards on mount.",
+    "active_pulse": "CSS pulse animation for 'working' statuses."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text against dark backgrounds passes WCAG AA. Muted text must not be darker than hsl(240, 5%, 50%).",
+    "focus": "Always use focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background.",
+    "data_testids": "All interactive elements MUST include a data-testid attribute in kebab-case (e.g., data-testid='agent-card-1', data-testid='cerebro-voice-btn')."
+  },
+  "media": {
+    "image_urls": {
+      "dashboard_background": {
+        "url": "https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWMlMjAzZCUyMGx1eHVyeXxlbnwwfHx8fDE3ODQxNzMyOTd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract geometric 3D luxury background. Use as a very subtle fixed background overlay with opacity-10."
+      },
+      "cerebro_avatar": {
+        "url": "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwZ2xvd2luZyUyMG5vZGVzfGVufDB8fHx8MTc4MTk2OTQ2M3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Futuristic glowing core node. Use as the avatar or visual representation for the Master 'Cerebro' agent."
+      }
+    },
+    "icons": "Use lucide-react. Match specific icons to the 10 agents (e.g., Package, Settings, TrendingUp, Copy, DollarSign, Share2, Video, Sparkles, Target, Brain)."
+  },
+  "general_ui_ux_guidelines": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Never apply universal transitions (transition: all).",
+    "Do not center align the app container (.App { text-align: center; } is banned).",
+    "Always use modern button styles.",
+    "NEVER use emojis for icons. Use lucide-react instead.",
+    "Every interaction needs micro-animations.",
+    "Use sonner for toast notifications.",
+    "Do not use transparent backgrounds for surfaces with content under them.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ],
+  "instructions_to_main_agent": [
+    "You are building a Spanish-language command center dashboard for an autonomous Shopify AI empire.",
+    "The UI is a 3-column layout (or 2-column + sidebar): Left Sidebar (Nav), Center (KPIs + 10 Agent Cards + Real-time feed), Right Panel (Cerebro Chat/Voice).",
+    "Implement the 10 specific agents: 1. Productos, 2. Automatización, 3. Capital, 4. Clonación, 5. Finanzas, 6. RRSS, 7. Edición A/V, 8. Estética, 9. Ventas, 10. Cerebro.",
+    "The right panel 'Cerebro' is the master agent. It must feature a chat UI and a prominent, glowing voice input button.",
+    "Agent cards should open a detailed view or dialog when clicked, showing their specific conversation/logs.",
+    "Include a simulated metrics section at the top (e.g., Ingresos: $1.2M, Tiendas: 14, Tareas Activas: 42).",
+    "Include a real-time activity feed (e.g., a scrolling list of recent agent actions).",
+    "Apply the font configuration via index.css.",
+    "Ensure all interactive elements have data-testid attributes."
+  ],
+  "universal_guidelines_for_main_agent": "Ensure strictly adhering to the luxury dark mode theme, maintaining UI hierarchy, replacing emojis with lucide icons, adding micro-interactions, utilizing data-testid everywhere, and focusing on a high-density futuristic command-center aesthetic."
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+    :root {
+        --background: 240 10% 4%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 6%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 6%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 190 90% 50%;
+        --primary-foreground: 240 10% 4%;
+        --secondary: 240 10% 12%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 10% 12%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 43 74% 66%;
+        --accent-foreground: 240 10% 4%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 10% 16%;
+        --input: 240 10% 16%;
+        --ring: 190 90% 50%;
+        --chart-1: 190 90% 50%;
+        --chart-2: 43 74% 66%;
+        --chart-3: 260 70% 65%;
+        --chart-4: 340 75% 55%;
+        --chart-5: 160 60% 45%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+::selection {
+    background: hsl(190 90% 50% / 0.35);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: hsl(240 10% 20%);
+    border-radius: 3px;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
